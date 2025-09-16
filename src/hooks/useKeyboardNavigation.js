@@ -1,1 +1,45 @@
-import { useEffect } from 'react';\n\nexport const useKeyboardNavigation = (currentPage, totalPages, onNextPage, onPrevPage) => {\n  useEffect(() => {\n    const handleKeyPress = (event) => {\n      // Prevent navigation if user is typing in an input\n      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {\n        return;\n      }\n\n      switch (event.key) {\n        case 'ArrowRight':\n        case ' ': // Spacebar\n          event.preventDefault();\n          onNextPage();\n          break;\n        case 'ArrowLeft':\n          event.preventDefault();\n          onPrevPage();\n          break;\n        case 'Home':\n          event.preventDefault();\n          // Go to first page\n          if (currentPage > 0) {\n            for (let i = currentPage; i > 0; i--) {\n              onPrevPage();\n            }\n          }\n          break;\n        case 'End':\n          event.preventDefault();\n          // Go to last page\n          if (currentPage < totalPages - 1) {\n            for (let i = currentPage; i < totalPages - 1; i++) {\n              onNextPage();\n            }\n          }\n          break;\n      }\n    };\n\n    window.addEventListener('keydown', handleKeyPress);\n    return () => window.removeEventListener('keydown', handleKeyPress);\n  }, [currentPage, totalPages, onNextPage, onPrevPage]);\n};
+import { useEffect } from 'react';
+
+export const useKeyboardNavigation = (currentPage, totalPages, onNextPage, onPrevPage) => {
+  useEffect(() => {
+    const handleKeyPress = (event) => {
+      // Prevent navigation if user is typing in an input
+      if (event.target.tagName === 'INPUT' || event.target.tagName === 'TEXTAREA') {
+        return;
+      }
+
+      switch (event.key) {
+        case 'ArrowRight':
+        case ' ': // Spacebar
+          event.preventDefault();
+          onNextPage();
+          break;
+        case 'ArrowLeft':
+          event.preventDefault();
+          onPrevPage();
+          break;
+        case 'Home':
+          event.preventDefault();
+          // Go to first page
+          if (currentPage > 0) {
+            for (let i = currentPage; i > 0; i--) {
+              onPrevPage();
+            }
+          }
+          break;
+        case 'End':
+          event.preventDefault();
+          // Go to last page
+          if (currentPage < totalPages - 1) {
+            for (let i = currentPage; i < totalPages - 1; i++) {
+              onNextPage();
+            }
+          }
+          break;
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [currentPage, totalPages, onNextPage, onPrevPage]);
+};
