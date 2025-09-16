@@ -1,0 +1,139 @@
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.loading-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.loading-book {
+  width: 120px;
+  height: 160px;
+  position: relative;
+  transform-style: preserve-3d;
+}
+
+.book-spine {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 20px;
+  height: 100%;
+  background: linear-gradient(180deg, #8b4513 0%, #654321 100%);
+  border-radius: 4px 0 0 4px;
+  box-shadow: inset -2px 0 4px rgba(0, 0, 0, 0.3);
+}
+
+.book-pages {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  width: 95px;
+  height: 150px;
+  background: linear-gradient(180deg, #f8f8f8 0%, #e8e8e8 100%);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 
+    2px 4px 12px rgba(0, 0, 0, 0.2),
+    inset -2px 0 4px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.book-pages::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background: repeating-linear-gradient(
+    90deg,
+    #ddd 0,
+    #ddd 20px,
+    transparent 20px,
+    transparent 25px
+  );
+}
+
+.book-pages::after {
+  content: '';
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent 0,
+    transparent 18px,
+    #eee 18px,
+    #eee 20px
+  );
+}
+
+.loading-text {
+  text-align: center;
+  color: white;
+}
+
+.loading-text h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, #fff, #d2b48c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.loading-text p {
+  font-size: 1rem;
+  opacity: 0.8;
+  margin: 0;
+}
+
+.loading-bar {
+  width: 200px;
+  height: 3px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+
+.loading-bar::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #8b4513, #d2b48c, #8b4513);
+  border-radius: 2px;
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+    width: 0%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    transform: translateX(100%);
+    width: 0%;
+  }
+}

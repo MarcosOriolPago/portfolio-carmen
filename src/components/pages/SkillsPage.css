@@ -1,0 +1,53 @@
+.skills-page {
+  padding: 2rem 0;
+}
+
+.skills-content {
+  margin-top: 2rem;
+}
+
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.skill-category h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.375rem;
+  margin-bottom: 1rem;
+  color: #8b4513;
+}
+
+.skill-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.skill-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: rgba(139, 69, 19, 0.05);
+  border-radius: 8px;
+}
+
+.skill-item span {
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.skill-bar {
+  width: 200px;
+  height: 8px;
+  background: rgba(139, 69, 19, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  background: linear-gradient(90deg, #8b4513, #d2b48c);
+  border-radius: 4px;
+  transition: width 1s ease-in-out;
+}
