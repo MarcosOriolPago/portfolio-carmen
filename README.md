@@ -1,26 +1,31 @@
 # Carmen Sierra Sancho - Architecture Portfolio
 
-A modern, interactive portfolio website designed as a book with page-turning animations. Built with React, Framer Motion, and modern CSS.
+A modern, professional portfolio website with an interactive PDF viewer for your architecture portfolio. Built with React, Framer Motion, and modern CSS featuring architectural gray themes.
 
 ## Features
 
-- 📖 **Book-style Interface**: Navigate through your portfolio like turning pages of a book
-- ✨ **Smooth Animations**: Beautiful page transitions using Framer Motion
-- 📱 **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- 📱 **Responsive Design**: Fully responsive layout optimized for all devices
+- 📄 **Interactive PDF Viewer**: Navigate through your actual portfolio PDF with realistic page-turning animations
+- 👆 **Touch & Swipe Support**: Swipe left/right or drag to navigate through portfolio pages
 - ⌨️ **Keyboard Navigation**: Use arrow keys, spacebar, Home, and End keys to navigate
-- 🎨 **Modern Design**: Clean, professional aesthetic with architectural color palette
-- 🌟 **Interactive Elements**: Hover effects, animated loading screen, and smooth transitions
+- 🎨 **Architectural Design**: Clean, professional gray color scheme perfect for architecture
+- ✨ **Smooth Animations**: Beautiful transitions and micro-interactions
+- 📖 **Full-Width PDF Display**: Portfolio PDF takes full advantage of screen real estate
+- 🔄 **Loading Animations**: Professional loading screen with animated book icon
 
 ## Structure
 
-- **Cover Page**: Introduction with your name and title
-- **About**: Personal information and design philosophy
-- **Education**: Academic background and achievements
-- **Experience**: Work history and internships
-- **Projects**: Featured architectural projects with descriptions
-- **Skills**: Technical skills and software proficiency
-- **Gallery**: Visual showcase of your work
-- **Contact**: Contact information and social links
+- **Hero Section**: Full-screen introduction with your name, title, and call-to-action buttons
+- **About Section**: Personal information, philosophy, education details, and areas of interest
+- **Portfolio Section**: Interactive PDF viewer displaying your actual portfolio with:
+  - Full-width PDF display
+  - Realistic page-turning animations
+  - Swipe/drag navigation
+  - Keyboard shortcuts
+  - Page thumbnails for quick navigation
+  - Zoom controls
+- **CV Section**: Download and view your CV PDF
+- **Contact Section**: Contact information and social media links
 
 ## Getting Started
 
@@ -73,14 +78,18 @@ import myPhoto from '../assets/my-photo.jpg';
 <img src={myPhoto} alt="Carmen Sierra Sancho" />
 ```
 
-### Navigation Controls
+### Portfolio Navigation Controls
 
-- **Mouse**: Click the navigation buttons or use the dropdown menu
+- **Touch/Mouse**: 
+  - Swipe left/right or drag the PDF to navigate pages
+  - Click navigation buttons for precise control
+  - Click page thumbnails to jump to specific pages
 - **Keyboard**:
   - `→` / `Space`: Next page
   - `←`: Previous page
   - `Home`: Go to first page
   - `End`: Go to last page
+- **Zoom**: Use zoom controls to adjust PDF size for better viewing
 
 ## Technologies Used
 

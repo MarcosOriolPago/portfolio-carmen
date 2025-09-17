@@ -5,54 +5,122 @@
 
 .app {
   min-height: 100vh;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  position: relative;
-  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
   font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
 }
 
-.app::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
-  pointer-events: none;
+/* Main content sections */
+main {
+  width: 100%;
 }
 
-/* Page Headers */
-.page-header {
-  text-align: center;
-  margin-bottom: 2rem;
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
 }
 
-.page-header h2 {
+/* Section styling */
+#home {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+}
+
+#about {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+#portfolio {
+  background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
+}
+
+#cv {
+  background: #f8f9fa;
+  padding: 4rem 2rem;
+}
+
+#contact {
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  padding: 4rem 2rem;
+}
+
+/* Typography */
+.section-title {
   font-family: 'Playfair Display', serif;
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 600;
   color: #2c3e50;
-  margin-bottom: 0.5rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  position: relative;
 }
 
-.header-line {
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 80px;
   height: 3px;
-  background: linear-gradient(90deg, #8b4513, #d2b48c);
-  margin: 0 auto;
+  background: linear-gradient(90deg, #7f8c8d, #95a5a6);
   border-radius: 2px;
+}
+
+#contact .section-title,
+#home .section-title {
+  color: white;
+}
+
+#contact .section-title::after,
+#home .section-title::after {
+  background: linear-gradient(90deg, #ecf0f1, #bdc3c7);
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  color: #7f8c8d;
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#contact .section-subtitle,
+#home .section-subtitle {
+  color: #bdc3c7;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .app {
-    padding: 1rem;
+  section {
+    min-height: auto;
+    padding: 3rem 1rem;
   }
   
-  .page-header h2 {
-    font-size: 2rem;
+  .section-title {
+    font-size: 2.5rem;
+  }
+  
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
   }
 }

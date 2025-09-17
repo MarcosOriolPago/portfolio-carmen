@@ -37,6 +37,6 @@ import profilePhoto from '../assets/photos/profile.jpg';
 import project1 from '../assets/projects/project1/thumbnail.jpg';
 
 // Use in JSX
-<img src={profilePhoto} alt=\"Carmen Sierra Sancho\" />
-<img src={project1} alt=\"Project 1\" />
+<img src={profilePhoto} alt="Carmen Sierra Sancho" />
+<img src={project1} alt="Project 1" />
 ```

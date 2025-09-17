@@ -42,7 +42,7 @@ const LoadingScreen = () => {
           transition={{ delay: 0.5, duration: 0.8 }}
         >
           <h2>Carmen Sierra Sancho</h2>
-          <p>Loading Portfolio...</p>
+          <p>Loading Architecture Portfolio...</p>
         </motion.div>
         
         <motion.div 
