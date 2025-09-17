@@ -29,13 +29,9 @@ section {
   color: white;
 }
 
-#about {
-  background: #f8f9fa;
-  padding: 4rem 2rem;
-}
 
 #portfolio {
-  background: linear-gradient(135deg, #ecf0f1 0%, #d5dbdb 100%);
+  background: linear-gradient(135deg, #d5d9dc 0%, #e6edf8 100%);
 }
 
 #cv {
@@ -46,7 +42,7 @@ section {
 #contact {
   background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
   color: white;
-  padding: 4rem 2rem;
+  padding: 2rem 0rem;
 }
 
 /* Typography */

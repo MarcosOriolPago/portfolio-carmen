@@ -1,8 +1,6 @@
 import { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import Header from './components/Header';
 import Hero from './components/Hero';
-import About from './components/About';
 import PdfFlipBook from './components/PdfFlipBook';
 import CVViewer from './components/CVViewer';
 import Contact from './components/Contact';
@@ -56,10 +54,6 @@ function App() {
       <main>
         <section id="home">
           <Hero />
-        </section>
-        
-        <section id="about">
-          <About />
         </section>
         
         <section id="portfolio">

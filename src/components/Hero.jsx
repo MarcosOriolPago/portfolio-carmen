@@ -97,19 +97,7 @@ const Hero = () => {
           </motion.a>
         </motion.div>
       </motion.div>
-      
-      <motion.div 
-        className="hero-scroll-indicator"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ 
-          duration: 2,
-          repeat: Infinity,
-          ease: "easeInOut"
-        }}
-      >
-        <div className="scroll-line"></div>
-        <span>Scroll to explore</span>
-      </motion.div>
+    
       
       {/* Background geometric pattern */}
       <div className="hero-background">

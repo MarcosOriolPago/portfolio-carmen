@@ -26,28 +26,12 @@ const Contact = () => {
           <div className="contact-info">
             <div className="contact-item">
               <i className="fas fa-envelope"></i>
-              <span>carmen.sierra@email.com</span>
+              <span>carmennssd@gmail.com</span>
             </div>
             <div className="contact-item">
               <i className="fas fa-phone"></i>
-              <span>+34 XXX XXX XXX</span>
+              <span>+34 648 92 68 37</span>
             </div>
-            <div className="contact-item">
-              <i className="fas fa-map-marker-alt"></i>
-              <span>Spain</span>
-            </div>
-          </div>
-          
-          <div className="social-links">
-            <a href="#" className="social-link">
-              <i className="fab fa-linkedin"></i>
-            </a>
-            <a href="#" className="social-link">
-              <i className="fab fa-instagram"></i>
-            </a>
-            <a href="#" className="social-link">
-              <i className="fab fa-behance"></i>
-            </a>
           </div>
         </motion.div>
       </div>
