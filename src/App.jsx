@@ -8,6 +8,8 @@ import Footer from './components/Footer';
 import LoadingScreen from './components/LoadingScreen';
 import './App.css';
 
+import ProgressBar from './components/ProgressBar';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [activeSection, setActiveSection] = useState('home');
@@ -57,7 +59,7 @@ function App() {
         </section>
         
         <section id="portfolio">
-          <PdfFlipBook file={'./portfolio.pdf'} pageScale={1} />
+          <PdfFlipBook file={'./portfolio.pdf'} pageScale={0.9} />
         </section>
         
         <section id="cv">

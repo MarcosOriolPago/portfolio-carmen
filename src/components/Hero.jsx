@@ -62,9 +62,8 @@ const Hero = () => {
           className="hero-description"
           variants={itemVariants}
         >
-          Passionate about creating innovative and sustainable architectural solutions 
-          that harmonize functionality with aesthetic excellence. Dedicated to designing 
-          spaces that inspire and elevate the human experience.
+          I'm an architecture student, curious about the world and inspired by the places I discover. 
+          I enjoy working with others, learning from every experience, and growing through new challenges.
         </motion.p>
         
         <motion.div 
