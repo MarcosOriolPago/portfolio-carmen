@@ -43,6 +43,17 @@ const Hero = () => {
         initial="hidden"
         animate={inView ? "visible" : "hidden"}
       >
+        <motion.div 
+          className="hero-photo"
+          variants={itemVariants}
+        >
+          <img 
+            src="carmen.jpg" 
+            alt="Carmen Sierra Sancho" 
+            className="profile-image"
+          />
+        </motion.div>
+
         <motion.h1 
           className="hero-title"
           variants={itemVariants}
@@ -50,13 +61,13 @@ const Hero = () => {
           Carmen Sierra Sancho
         </motion.h1>
         
-        <motion.div 
+        {/* <motion.div 
           className="hero-subtitle"
           variants={itemVariants}
         >
           <span className="subtitle-line">Architecture Student</span>
           <span className="subtitle-line">Final Year</span>
-        </motion.div>
+        </motion.div> */}
         
         <motion.p 
           className="hero-description"
