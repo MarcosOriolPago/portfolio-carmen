@@ -73,7 +73,7 @@ const Hero = () => {
           className="hero-description"
           variants={itemVariants}
         >
-          I'm an architecture student, curious about the world and inspired by the places I discover. 
+          I'm an recent Architecture graduate, curious about the world and inspired by the places I discover. 
           I enjoy working with others, learning from every experience, and growing through new challenges.
         </motion.p>
         
@@ -107,47 +107,6 @@ const Hero = () => {
           </motion.a>
         </motion.div>
       </motion.div>
-    
-      
-      {/* Background geometric pattern */}
-      <div className="hero-background">
-        <motion.div 
-          className="geometric-shape shape-1"
-          animate={{ 
-            rotate: [0, 360],
-            scale: [1, 1.1, 1]
-          }}
-          transition={{
-            duration: 20,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        <motion.div 
-          className="geometric-shape shape-2"
-          animate={{ 
-            rotate: [360, 0],
-            scale: [1, 0.9, 1]
-          }}
-          transition={{
-            duration: 15,
-            repeat: Infinity,
-            ease: "linear"
-          }}
-        />
-        <motion.div 
-          className="geometric-shape shape-3"
-          animate={{ 
-            rotate: [0, 180, 360],
-            opacity: [0.3, 0.6, 0.3]
-          }}
-          transition={{
-            duration: 25,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-        />
-      </div>
     </div>
   );
 };
