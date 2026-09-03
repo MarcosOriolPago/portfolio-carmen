@@ -32,6 +32,16 @@ const Contact = () => {
               <i className="fas fa-phone"></i>
               <span>+34 648 92 68 37</span>
             </div>
+            <div className="contact-item">
+              <i className="fab fa-linkedin"></i>
+              <a 
+                href="https://www.linkedin.com/in/carmensierrasancho/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                LinkedIn Profile
+              </a>
+            </div>
           </div>
         </motion.div>
       </div>
